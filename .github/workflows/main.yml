@@ -7,7 +7,7 @@ jobs:
   ping-pong:
     runs-on: ubuntu-latest
     steps:
-      - name: PING - Dispatch initiating repository event
+      - name: PING - Dispatch initiating repository even
         if: github.event.action != 'pong'
         run: |
           curl -X POST https://api.github.com/repos/notyan/git-learn/dispatches \
